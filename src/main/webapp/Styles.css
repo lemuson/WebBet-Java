@@ -1,0 +1,478 @@
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+/* Навигация */
+.general-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+.general-header nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Кнопки перехода по страницам */
+.general-header a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+    width: 150px;
+    text-align: center;
+}
+.general-header a:hover {
+    background-color: #555;
+}
+
+/* Основной стиль для кнопки */
+.main-button {
+    display: inline-block;
+    width: auto;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-right: 10px;
+    text-decoration: none;
+}
+.main-button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Баланс */
+.general-balance-add, .general-balance-out {
+    color: #000000;
+    background-color: #008000;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-left: 10px;
+}
+
+.general-balance-add:hover, .general-balance-out:hover {
+    background-color: #008000;
+}
+
+.general-balance-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 30px;
+}
+
+
+
+/*---- СТИЛИ ДЛЯ АККАУНТА ----*/
+/* Контейнер аккаунта */
+.account-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 120px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Профиль пользователя */
+.account-profile-container {
+    width: 35%;
+}
+.account-profile-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.account-profile-info {
+    margin-bottom: 15px;
+}
+.account-profile-info label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.account-profile-info input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.account-profile-info input:focus {
+    border-color: #333;
+    outline: none;
+}
+
+/* История ставок */
+.account-history-container {
+    width: 65%;
+    margin-left: 10px;
+    overflow-x: auto;
+    max-height: 400px;
+    overflow-y: auto;
+}
+.account-history-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Таблица ставок */
+.account-bet-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.account-bet-table th, .account-bet-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+.account-bet-table th {
+    background-color: #f8f8f8;
+}
+
+/* Столбец "Команда" */
+.account-team {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.account-team-logo {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.account-team-name {
+    font-size: 14px;
+}
+
+/* Столбец "Ставка", "Коэффициент" */
+.account-price, .account-coefficient {
+    font-weight: bold;
+}
+
+/* Столбец "Статус" */
+.account-status {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+.account-status.active {
+    background-color: #28a745;
+    color: #fff;
+}
+.account-status.inactive {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+
+
+/*---- СТИЛИ ДЛЯ АВТОРИЗАЦИИ ----*/
+/* Контейнер для регистрации */
+.authorization-container {
+    max-width: 500px;
+    margin: 100px auto 50px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.authorization-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Ввод данных(подпись + поле) */
+.authorization-input {
+    margin-bottom: 15px;
+}
+.authorization-input label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.authorization-input input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.authorization-input input:focus {
+    border-color: #333;
+    outline: none;
+}
+
+/* Переброс на страницу входа */
+.authorization-redirect {
+    margin-top: 20px;
+    text-align: center;
+}
+.authorization-redirect a {
+    color: #007BFF;
+    text-decoration: none;
+}
+.authorization-redirect a:hover {
+    text-decoration: underline;
+}
+
+
+
+/*---- СТИЛИ ДЛЯ ГЛАВНОЙ СТРАНИЦЫ ----*/
+/* Контейнер просмотра ставок */
+.bets-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 40px;
+}
+.bets-menu {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    max-width: 100%;
+}
+.bets-info-block {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 100%;
+    max-height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/* Отображение ставки */
+.bets-match-container {
+    width: 330px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+.bets-match-header {
+    font-size: 14px;
+    color: #8b8b8b;
+    margin-bottom: 10px;
+    text-align: center;
+}
+/* Название, логотип команды */
+.bets-teams {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+.bets-team {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.bets-team-name {
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: 10px;
+}
+.bets-score {
+    font-size: 20px;
+    color: #333;
+    margin-left: auto;
+}
+.bets-team-logo {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+/* Коэффициенты */
+.bets-coefficients {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.bets-coefficients-layout {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.bets-coefficients-layout span {
+    display: block;
+    width: 80px;
+    text-align: center;
+}
+
+
+/*---- СТИЛИ ДЛЯ СТРАНИЦЫ СТАВКИ ----*/
+/* Контейнер просмотра ставки на матч */
+.place-bet-container {
+    width: 500px;
+    border-radius: 8px;
+    padding-top: 50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* Отображение команды */
+.place-bet-teams {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.place-bet-team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+}
+.place-bet-team img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: contain;
+}
+
+/* Данные о матче (верхняя часть контейнера) */
+.place-bet-match-info {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Подпись коэффициентов */
+.place-bet-odds {
+    margin-bottom: 20px;
+}
+.place-bet-odds-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+.place-bet-odds-labels span {
+    flex: 1;
+    text-align: center;
+}
+/* Кнопки выбора коэффициентов */
+.place-bet-odds-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.place-bet-odds-btn {
+    flex: 1;
+    padding: 12px 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+.place-bet-odds-btn.active {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Ввод ставки */
+.place-bet-stake-input {
+    margin-bottom: 10px;
+}
+.place-bet-stake-input input {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+/* Ожидаемый результат */
+.place-bet-expected-win {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #555;
+}
+
+
+
+/* СТИЛИ ДЛЯ АДМИНИСТРАТОРА */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+.admin-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.admin-block {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.admin-block h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+.admin-input {
+    margin-bottom: 10px;
+}
+.admin-input label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.admin-input input, .admin-input select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.admin-save-button {
+    display: inline-block;
+    margin-top: 10px;
+}
